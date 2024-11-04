@@ -14,6 +14,11 @@ const routes = Object.keys(pages).map((path) => {
     }
 })
 
+routes.push({
+    path: '/:pathMatch(.*)*',
+    component: () => import('../pages/notFound/page.vue'),
+})
+
 const routers = createRouter({
     history: createWebHistory(),
     routes,
