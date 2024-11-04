@@ -21,7 +21,7 @@ routes.push({
 
 const routers = createRouter({
     history: createWebHistory(),
-    routes,
+    routes: routes,
 })
 
 export default routers
