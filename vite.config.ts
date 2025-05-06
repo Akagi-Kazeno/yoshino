@@ -5,6 +5,7 @@ import dayjs from "dayjs"
 import utc from "dayjs/plugin/utc"
 import timezone from "dayjs/plugin/timezone.js"
 import * as path from "node:path";
+import tailwindcss from '@tailwindcss/vite'
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -16,6 +17,7 @@ export default defineConfig({
     plugins: [
         vue(),
         vueJsx(),
+        tailwindcss(),
     ],
     define: {
         "import.meta.env.__VERSION__": JSON.stringify(version),
