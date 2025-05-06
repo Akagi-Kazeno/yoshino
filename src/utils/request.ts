@@ -1,4 +1,5 @@
 import axios from 'axios'
+import {logError} from "./logger";
 
 let loadingInstance: HTMLElement | null = null
 let requestCount = 0
@@ -50,7 +51,7 @@ instance.interceptors.response.use(
     },
     (error) => {
         hideLoading();
-        console.error("axios error: ", error)
+        logError("request", "axios error: ", error)
         return Promise.reject(error)
     },
 )
