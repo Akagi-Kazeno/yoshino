@@ -14,7 +14,8 @@ pnpm install
 ```
 
 ### packages
-1. tailwindcss
+
+1. UnoCSS
 2. vue-router
 3. pinia
 4. axios
